@@ -14,6 +14,7 @@ public class TestSelenium {
 
         Thread.sleep(5000);
         driver.close();
+
     }
 
 }
