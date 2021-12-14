@@ -2,7 +2,10 @@ package automation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
 
 public class Locators {
     public static void main(String[] args) throws InterruptedException {
@@ -16,24 +19,30 @@ public class Locators {
         Thread.sleep(2000);
 
 //		driver.findElement(By.id("cpar1")).click();
-		driver.findElement(By.id("cpar1")).sendKeys("1000");
-		Thread.sleep(5000);
-		driver.findElement(By.id("cpar2")).sendKeys("120");
-		Thread.sleep(5000);
-		driver.findElement(By.id("cpar2")).clear();
-		Thread.sleep(5000);
-		System.out.println("Value is " + driver.findElement(By.id("cpar1")).getAttribute("value"));
+//        driver.findElement(By.id("cpar1")).sendKeys("1000");
+//        Thread.sleep(5000);
+//        driver.findElement(By.id("cpar2")).sendKeys("120");
+//        Thread.sleep(5000);
+//        driver.findElement(By.id("cpar2")).clear();
+//        Thread.sleep(5000);
+//        System.out.println("Value is " + driver.findElement(By.id("cpar1")).getAttribute("value"));
 
 //		List<WebElement> listByTag = driver.findElements(By.tagName("p"));
 //		System.out.println("List of tag");
 //		for(WebElement element : driver.findElements(By.tagName("p"))) {
 //			System.out.println(element.getText());
 //		}
+//        for(WebElement element : listByTag) {
+//            System.out.println(element.getText());
+//        }
+//        System.out.println("List size is : " + listByTag.size());
 
 //		System.out.println("Link Text : " + driver.findElement(By.linkText("Scientific")).getTagName());
 //		System.out.println("Link Text : " + driver.findElement(By.linkText("Scient")).getTagName());
 //
-//		System.out.println("Partial Link Text : " + driver.findElement(By.partialLinkText("ient")).getTagName());
+//		System.out.println("Partial Link Text : " + driver.findElement(By.partialLinkText("Scient")).getTagName());
+        System.out.println(driver.findElement(By.tagName("p")).getText());
+
 
 //		driver.findElement(By.className("inlong")).sendKeys("Prashant");
 
@@ -65,7 +74,7 @@ public class Locators {
 //		Thread.sleep(5000);
 //		System.out.println("Value is " + driver.findElement(By.cssSelector("input[name='cpar1']")).getAttribute("value"));
 
-        Thread.sleep(10000);
+        Thread.sleep(5000);
 
 
         driver.quit();
