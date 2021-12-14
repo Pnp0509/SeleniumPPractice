@@ -16,13 +16,13 @@ public class Locators {
         Thread.sleep(2000);
 
 //		driver.findElement(By.id("cpar1")).click();
-		driver.findElement(By.id("cpar1")).sendKeys("1000");
-		Thread.sleep(5000);
-		driver.findElement(By.id("cpar2")).sendKeys("120");
-		Thread.sleep(5000);
-		driver.findElement(By.id("cpar2")).clear();
-		Thread.sleep(5000);
-		System.out.println("Value is " + driver.findElement(By.id("cpar1")).getAttribute("value"));
+//		driver.findElement(By.id("cpar1")).sendKeys("1000");
+//		Thread.sleep(5000);
+//		driver.findElement(By.id("cpar2")).sendKeys("120");
+//		Thread.sleep(5000);
+//		driver.findElement(By.id("cpar2")).clear();
+//		Thread.sleep(5000);
+//		System.out.println("Value is " + driver.findElement(By.id("cpar1")).getAttribute("value"));
 
 //		List<WebElement> listByTag = driver.findElements(By.tagName("p"));
 //		System.out.println("List of tag");
@@ -30,7 +30,7 @@ public class Locators {
 //			System.out.println(element.getText());
 //		}
 
-//		System.out.println("Link Text : " + driver.findElement(By.linkText("Scientific")).getTagName());
+		System.out.println("Link Text : " + driver.findElement(By.linkText("Scientific")).getTagName());
 //		System.out.println("Link Text : " + driver.findElement(By.linkText("Scient")).getTagName());
 //
 //		System.out.println("Partial Link Text : " + driver.findElement(By.partialLinkText("ient")).getTagName());
