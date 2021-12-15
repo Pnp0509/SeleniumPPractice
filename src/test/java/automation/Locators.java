@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+import java.util.ListIterator;
 
 public class Locators {
     public static void main(String[] args) throws InterruptedException {
@@ -37,15 +38,24 @@ public class Locators {
 //        }
 //        System.out.println("List size is : " + listByTag.size());
 
+//        ListIterator list_it= listByTag.listIterator();
+//        while (list_it.hasNext()){
+//            System.out.println(list_it.next().getClass().);
+//        }
+
 //		System.out.println("Link Text : " + driver.findElement(By.linkText("Scientific")).getTagName());
 //		System.out.println("Link Text : " + driver.findElement(By.linkText("Scient")).getTagName());
 //
 //		System.out.println("Partial Link Text : " + driver.findElement(By.partialLinkText("Scient")).getTagName());
-        System.out.println(driver.findElement(By.tagName("p")).getText());
+//        System.out.println(driver.findElement(By.tagName("p")).getText());
 
 
 //		driver.findElement(By.className("inlong")).sendKeys("Prashant");
 
+//        List<WebElement> listOfTextbox = driver.findElements(By.className("flsjhfdlishdf"));
+//        List<WebElement> listOfTextbox = driver.findElements(By.className("inlong"));
+
+//        System.out.println("Size of list i.e. number of text boxes is : " + listOfTextbox.size());
 
 //		System.out.println("Class " + driver.findElement(By.className("verybigtext")).getText());
 
