@@ -1,0 +1,42 @@
+Xpath
+
+Absolute   /html/body/div[2]/div[2]/div/ul[1]/li[6]/a   Start from root node i.e. html
+
+Relative   //*[@id="java_technologies"]/li[6]/a    Start from random/reference node/other than root node
+
+Root Node : Self : //b[text()='Defect Tools']
+Axes
+ancestor           //b[text()='Defect Tools']/ancestor::div
+parent             //b[text()='Defect Tools']/parent::h4
+preceding          //b[text()='Defect Tools']/preceding::h4
+
+RootNode : //div[@class='col-md-3'][2]/div
+descendant         //div[@class='col-md-3'][2]/div/descendant::li
+child              //div[@class='col-md-3'][2]/div/child::ul
+following-sibling  //div[@class='col-md-3'][2]/div/ul/following-sibling::p
+
+following          //div[@class='col-md-3'][2]/div/ul/following::i[5]
+
+//div[@class='col-md-3'][2]/child::div/child::ul[1]/following::i[5]
+
+
+
+
+
+table	-> ancestor
+	tbody	->ancestor
+
+		tr    -> username	->preceding
+			td
+			td
+				input
+
+		tr    -> Password	->ancestor
+			td
+			td	-> Parent
+				input  ->> Reference node
+
+		tr    -> Login/Reset
+			td
+			td
+				input

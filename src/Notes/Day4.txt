@@ -1,0 +1,28 @@
+Interaction with WebElements
+sendKeys, clear, get text, click, getAttribute  getCssValue (class, css)
+
+sendKeys -> To set the text in text box
+clear -> To clear the text present in textbox
+click -> mouse left click
+getText -> to read/get displayed text
+
+
+Different Type of webelements on web page
+
+textbox
+button
+checkbox
+radiobutton
+hyper links / link
+Dropdown
+toogle switch
+Label
+
+image
+
+List
+
+
+https://www.techlistic.com/p/selenium-practice-form.html
+https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm
+https://demoqa.com/automation-practice-form
