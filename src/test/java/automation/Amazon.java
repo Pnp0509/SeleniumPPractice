@@ -18,9 +18,10 @@ public class Amazon {
         driver.get("https://www.amazon.in/s?k=mobiles&crid=1VGXNCXWO2NEB&sprefix=mob%2Caps%2C8300&ref=nb_sb_noss_2");
 
         Thread.sleep(2000);
-
+        /*Wbelement can not created*/
 //        WebElement price= driver.findElement(By.xpath((//*[@id="search"]/div[1]/div/div/span[3]/div[2]/div/div/span/descendant::div/descendant::a/descendant::span[1]/descendant::span[2]//descendant::span[2])));
 
+       /*Price list Iterate seperately using foreach loop*/
         List<WebElement> price= driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div/div/span[3]/div[2]/div/div/span/descendant::div/descendant::a/descendant::span[1]/descendant::span[2]//descendant::span[2]/ancestor::span[1]/child::span[2]"));Thread.sleep(10000);
 //
 //        for(WebElement element : driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div/div/span[3]/div[2]/div/div/span/descendant::div/descendant::a/descendant::span[1]/descendant::span[2]//descendant::span[2]/ancestor::span[1]/child::span[2]"))) {
@@ -28,47 +29,39 @@ public class Amazon {
 //
 //        }
 
-
-
-
-        List<WebElement> Name= driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div/div/span/descendant::h2/descendant::span"));
+        /*Name list Iterate seperately using foreach loop*/
+        List<WebElement> name= driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div/div/span/descendant::h2/descendant::span"));
 
 //        for(WebElement elements : driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div/div/span/descendant::h2/descendant::span"))) {
 //            System.out.println(elements.getText());
 
 //        }
 
+
+        /*Try to Iterate using ListIterator*/
 //        Iterator nam= Name.listIterator();
 //        while (nam.hasNext()){
 //            System.out.println(nam.next().toString());
 //
 //        }
 
-        int count=price.size();
-
-        for(int i=0;i< Name.size();i++){
-            System.out.println("Model-"+""+i+" ---- "+Name.get(i).getText());
+        /*Using for loop model name amd their respective price is Iterated*/
+        /*i value name.size() unable to iterate price so using listIterator(index).next().getText() used to iterate value*/
+        for(int i=0;i<name.size();i++){
+            int j=i+1;
+            System.out.println("Model-"+""+j+" ---- "+name.get(i).getText());
             System.out.println("Price---"+price.listIterator(i).next().getText());
         }
 
+        /*i value name.size() unable to iterate price so using listIterator(index).next().getText() used to iterate value*/
 //        for(int i=0;i< price.size();i++){
-////            System.out.println("Model---"+Name.get(i).getText());
+//            System.out.println("Model---"+Name.get(i).getText());
 //            System.out.println("Price---"+price.get(i).getText());
 //        }
 
 
-//        for(WebElement element : driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div/div/span[3]/div[2]/div/div/span/descendant::div/descendant::a/descendant::span[1]/descendant::span[2]//descendant::span[2]/ancestor::span[1]/child::span[2]"))) {
-//            System.out.println(element.getText());
-//            for(WebElement elements : driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[3]/div[2]/div/div/span/descendant::h2/descendant::span"))) {
-//                System.out.println(elements.getText());
-//            }
-//
-//        }
-
-
-
-//        System.out.println("size of price"+price.size());
-//        System.out.println("Size of Name"+Name.size());
+        System.out.println("size of price"+price.size());
+        System.out.println("Size of Name"+name.size());
 
 
         Thread.sleep(10000);
