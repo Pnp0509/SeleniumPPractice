@@ -9,6 +9,7 @@ Axes
 ancestor           //b[text()='Defect Tools']/ancestor::div
 parent             //b[text()='Defect Tools']/parent::h4
 preceding          //b[text()='Defect Tools']/preceding::h4
+preceding-sibling  -> //b[text()='Web']/parent::h4/following-sibling::ul[1]/child::li/a[text()='Perl']/parent::li/preceding-sibling::li
 
 RootNode : //div[@class='col-md-3'][2]/div
 descendant         //div[@class='col-md-3'][2]/div/descendant::li
@@ -19,7 +20,8 @@ following          //div[@class='col-md-3'][2]/div/ul/following::i[5]
 
 //div[@class='col-md-3'][2]/child::div/child::ul[1]/following::i[5]
 
-
+@attribute='value'   //a[@title='Perl']
+function()='value'   //a[text()='Perl']
 
 
 
