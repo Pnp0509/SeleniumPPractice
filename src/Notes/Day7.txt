@@ -23,6 +23,18 @@ following          //div[@class='col-md-3'][2]/div/ul/following::i[5]
 @attribute='value'   //a[@title='Perl']
 function()='value'   //a[text()='Perl']
 
+Starts-with function
+    Using attribute //input[starts-with(@id,'fir')]
+    Using function  //label[starts-with(text(),'Su')]
+
+Contains()
+    Using Attribute //input[contains(@id,'rst')]
+    Using Function  //label[contains(text(),'cts')]
+
+
+Using OR //input[@name='gender'] | //input[contains(@value,'ale')]
+Using AND //input[@name='gender'] [contains(@value,'F')]
+
 
 
 table	-> ancestor
