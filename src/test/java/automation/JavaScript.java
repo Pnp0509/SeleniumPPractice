@@ -42,7 +42,9 @@ public class JavaScript {
 
         JavascriptExecutor js = (JavascriptExecutor)driver;
 //        js.executeScript("arguments[0].value='Prashant';", fname);Thread.sleep(5000);
-//		fname.sendKeys("Prashant");
+		fname.sendKeys("Prashant");
+        System.out.println(fname.getText());
+
 
 
 //		fname.clear();

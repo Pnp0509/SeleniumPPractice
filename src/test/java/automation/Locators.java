@@ -2,6 +2,7 @@ package automation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Locators {
@@ -15,14 +16,14 @@ public class Locators {
 
         Thread.sleep(2000);
 
-//		driver.findElement(By.id("cpar1")).click();
-		driver.findElement(By.id("cpar1")).sendKeys("1000");
-		Thread.sleep(5000);
-		driver.findElement(By.id("cpar2")).sendKeys("120");
-		Thread.sleep(5000);
-		driver.findElement(By.id("cpar2")).clear();
-		Thread.sleep(5000);
-		System.out.println("Value is " + driver.findElement(By.id("cpar1")).getAttribute("value"));
+////		driver.findElement(By.id("cpar1")).click();
+//		driver.findElement(By.id("cpar1")).sendKeys("1000");
+//		Thread.sleep(5000);
+//		driver.findElement(By.id("cpar2")).sendKeys("120");
+//		Thread.sleep(5000);
+//		driver.findElement(By.id("cpar2")).clear();
+//		Thread.sleep(5000);
+//		System.out.println("Value is " + driver.findElement(By.id("cpar1")).getAttribute("value"));
 
 //		List<WebElement> listByTag = driver.findElements(By.tagName("p"));
 //		System.out.println("List of tag");
@@ -35,7 +36,8 @@ public class Locators {
 //
 //		System.out.println("Partial Link Text : " + driver.findElement(By.partialLinkText("ient")).getTagName());
 
-//		driver.findElement(By.className("inlong")).sendKeys("Prashant");
+		driver.findElement(By.className("inlong")).sendKeys("Prashant");
+//        driver.findElements(By.className("inlong"));
 
 
 //		System.out.println("Class " + driver.findElement(By.className("verybigtext")).getText());

@@ -19,7 +19,7 @@ public class SelectClassPractice {
 //		driver.get("https://semantic-ui.com/modules/dropdown.html");
 		driver.get("https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm");
 
-        Thread.sleep(10000);
+//        Thread.sleep(10000);
 
 //		Select select = new Select(driver.findElement(By.name("country")));
 		Select select = new Select(driver.findElement(By.name("selenium_commands")));
@@ -60,13 +60,15 @@ public class SelectClassPractice {
 
 		select.selectByIndex(1);
         select.selectByVisibleText("Wait Commands");
-//        select.selectByIndex(4);
+
+        select.selectByIndex(4);
 		System.out.println("Option selected by index: " + select.getFirstSelectedOption().getText());
 		Thread.sleep(5000);
-//
+////
 		System.out.println("Is Multiple " + select.isMultiple());
-//
+
 		select.deselectByIndex(1);
+		select.deselectByIndex(5);
 		System.out.println("Option selected by index: " + select.getFirstSelectedOption().getText());
 
 

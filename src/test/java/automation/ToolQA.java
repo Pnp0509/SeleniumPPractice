@@ -84,8 +84,16 @@ public class ToolQA {
 //        System.out.println("Is Sport Selected"+sportcheck.isSelected());
 
         WebElement state=driver.findElement(By.id("state"));
+        WebElement selectState= driver.findElement(By.xpath("//*[@id=\"state\"]/div/div[1]/div[1]"));
+        WebElement Hariyana= driver.findElement(By.xpath("//*[@id=\"state\"]/div/div[1]/div[1]"));
 
-        js.executeScript("arguments[0].Select()", state);Thread.sleep(5000);
+        js.executeScript("arguments[0].click()",selectState);
+        js.executeScript("arguments[0].click()",Hariyana);
+
+        System.out.println((String) js.executeScript("return arguments[0].value" , selectState));
+
+
+//        js.executeScript("arguments[0].Select()", state);Thread.sleep(5000);
 
 //        Select select1= new Select(state);
 

@@ -27,11 +27,11 @@ public class Amazon {
         button.click();
 
        /*Price list Iterate seperately using foreach loop*/
-        List<WebElement> price= driver.findElements(By.xpath("//a[@class='a-link-normal s-link-style a-text-normal']/child::span[1]/following::span[@class='a-price-whole'][1]"));Thread.sleep(10000);
+        List<WebElement> price= driver.findElements(By.xpath("//span[@class='a-price-whole']"));Thread.sleep(10000);
 
-        for(WebElement element : driver.findElements(By.xpath("//a[@class='a-link-normal s-link-style a-text-normal']/child::span[1]/following::span[@class='a-price-whole'][1]"))) {
-            System.out.println(element.getText());
-        }
+//        for(WebElement element : driver.findElements(By.xpath("//span[@class='a-price-whole']"))) {
+//            System.out.println(element.getText());
+//        }
 
         /*Name list Iterate seperately using foreach loop*/
         List<WebElement> name= driver.findElements(By.xpath("//a[@class='a-link-normal s-link-style a-text-normal']/child::span[1]"));
@@ -51,11 +51,11 @@ public class Amazon {
 
         /*Using for loop model name amd their respective price is Iterated*/
         /*i value name.size() unable to iterate price so using listIterator(index).next().getText() used to iterate value*/
-//        for(int i=0;i<name.size();i++){
-//            int j=i+1;
-//            System.out.println("Model-"+""+j+" ---- "+name.get(i).getText());
+        for(int i=0;i<name.size();i++){
+            int j=i+1;
+            System.out.println("Model-"+""+j+" ---- "+name.get(i).getText());
 //            System.out.println("Price---"+price.listIterator(i).next().getText());
-//        }
+        }
 
         /*i value name.size() unable to iterate price so using listIterator(index).next().getText() used to iterate value*/
 //        for(int i=0;i< price.size();i++){
@@ -65,7 +65,7 @@ public class Amazon {
 
 
         System.out.println("size of price"+price.size());
-//        System.out.println("Size of Name"+name.size());
+        System.out.println("Size of Name"+name.size());
 
 
         Thread.sleep(10000);
