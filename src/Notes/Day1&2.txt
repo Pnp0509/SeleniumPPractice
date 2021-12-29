@@ -1,0 +1,49 @@
+Day1
+
+Why Automation ??
+
+-> to eliminate Manual / repeated test / efforts / Sanity/Smoke/Regression
+--> to eliminate human error
+
+Tools and setup
+    Java 1.8 or greater >> Oracle account -> Free
+    Selenium
+    Maven
+    IDE -> Intellij / eclipse / visualStudio
+    VersionControl -> Git >> Need account  -> Free
+    Install GitBash
+
+    TestNG
+
+    Framework
+
+Why Selenium --> UI Automation / Functional / non function / smoke sanity regression
+             --> Selenium is free Open Source -> No need to pay for license
+             --> As it is open source, there is wide support community over internet.
+
+Component of selenium
+
+Bindings ->>>> Languages -> Java/Python/Other
+WebDriver API / Library  -> Give direction to browser
+Driver -> For handling multiple browsers
+
+
+
+
+Git Commands
+git clone https://github.com/prashantnimje/aug2021.git    >> To clone git repo
+cd aug2021/    ->> To change directory Change Directory
+git branch   --> To check Current branch
+git checkout -b <BranchName>  --> To create and switch into new branch
+
+
+
+Import this project in IDE (Community)
+
+
+Install Java and set environment variable
+java -version
+Picked up JAVA_TOOL_OPTIONS: -Djava.vendor="Sun Microsystems, Inc"
+java version "1.8.0_291"
+Java(TM) SE Runtime Environment (build 1.8.0_291-b10)
+Java HotSpot(TM) 64-Bit Server VM (build 25.291-b10, mixed mode)

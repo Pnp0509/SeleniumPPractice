@@ -1,0 +1,10 @@
+Locators	https://www.calculator.net/percent-calculator.html
+	what is locator
+	id  ->> 1
+	tag
+	linkText  -->> Ancher tag --> hyper link
+	PartialLinkText   -->> Ancher tag --> hyper link
+	class
+	name >> 2
+	xpath 3
+	css selector 2

@@ -1,0 +1,17 @@
+Select Class / Handling dropdown
+
+selectByVisibleText      NoSuchElementException: Cannot locate element with text: Baby cat
+selectByIndex            NoSuchElementException: Cannot locate option with index: -1
+selectByValue            NoSuchElementException: Cannot locate option with value: Avatar
+
+getFirstSelectedOption
+getOptions
+
+
+
+JavaScript
+
+JavascriptExecutor js = (JavascriptExecutor)driver;
+
+js.executeScript("arguments[0].value='Prashant';", fname);
+js.executeScript("arguments[0].click();", male);

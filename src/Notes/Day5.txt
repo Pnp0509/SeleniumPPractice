@@ -1,0 +1,15 @@
+Selecting and deSelecting
+Checkbox -> by click -> possible
+Radio button -> once checked/selected , cannot deselect by clicking same button again
+
+Method to check -> .isSelected();
+
+
+
+Select Class / Handling dropdown
+
+selectByVisibleText
+selectByIndex
+
+getFirstSelectedOption
+getOptions
