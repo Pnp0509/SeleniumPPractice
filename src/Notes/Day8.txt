@@ -1,0 +1,34 @@
+Starts-with function
+    Using attribute //input[starts-with(@id,'fir')]
+    Using function  //label[starts-with(text(),'Su')]
+
+Contains()
+    Using Attribute //input[contains(@id,'rst')]
+    Using Function  //label[contains(text(),'cts')]
+
+
+Using OR //input[@name='gender'] | //input[contains(@value,'ale')]
+Using AND //input[@name='gender'] [contains(@value,'F')]
+
+
+
+
+
+@attribute='value'   //a[@title='Perl']
+function()='value'   //a[text()='Perl']
+
+//b[text()='Web']/parent::h4/following-sibling::ul[1]/child::li/a[text()='Perl']
+
+//b[text()='Web']/parent::h4/following-sibling::ul[1]/child::li[6]
+
+
+
+
+
+Css
+
+tag#id                                                      input#gender-radio-1
+tag.className                                               input.custom-control-input
+tag[Attribute='value']                                      input[type='radio']
+tag.className[Attribute='value']                            input.custom-control-input[type='radio']
+tag[Attribute1='value1'][Attribute2='value2']               input[type='radio'][id='gender-radio-2']
