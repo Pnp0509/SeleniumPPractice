@@ -1,0 +1,9 @@
+Handling Alerts
+https://www.seleniumeasy.com/test/javascript-alert-box-demo.html
+https://chercher.tech/practice/practice-pop-ups-selenium-webdriver
+accept, dismiss, gettext, sendKeys
+
+
+Handling multiple windows
+http://www.seleniumframework.com/Practiceform/
+switching to new window  driver.switchTo().window(childHandle);
