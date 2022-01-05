@@ -22,41 +22,41 @@ public class MultipleWindow {
         String parentWindowHandler = driver.getWindowHandle();
         System.out.println("Windows Handler String : " + parentWindowHandler);
 
-        WebElement newBrowserWindowButton = driver.findElement(By.id("button1"));
+//        WebElement newBrowserWindowButton = driver.findElement(By.id("button1"));
 //		WebElement newMessageWindowButton = driver.findElement(By.cssSelector("button[onclick='newMsgWin()']"));
-//        WebElement newBrowserTabButton = driver.findElement(By.cssSelector("button[onclick='newBrwTab()']"));
+        WebElement newBrowserTabButton = driver.findElement(By.cssSelector("button[onclick='newBrwTab()']"));
 
-        newBrowserWindowButton.click();
-        Thread.sleep(5000);
-        System.out.println("Title Before Switching is : " + driver.getTitle());
+//        newBrowserWindowButton.click();
+//        Thread.sleep(5000);
+//        System.out.println("Title Before Switching is : " + driver.getTitle());
 
-        Set<String> handlers = driver.getWindowHandles();
-        Iterator<String> itr = handlers.iterator();
+//        Set<String> handlers = driver.getWindowHandles();
+//        Iterator<String> itr = handlers.iterator();
 
-        while (itr.hasNext()) {
-            String childHandle = itr.next();
-            System.out.println("Child Windows Handler String : " + childHandle);
-            if (!childHandle.equalsIgnoreCase(parentWindowHandler)) {
-                System.out.println("Switching to child window");
-                driver.switchTo().window(childHandle);
-                System.out.println("Title After Switching is : " + driver.getTitle());
-
-				System.out.println("Switching to Parent window");
+//        while (itr.hasNext()) {
+//            String childHandle = itr.next();
+//            System.out.println("Child Windows Handler String : " + childHandle);
+//            if (!childHandle.equalsIgnoreCase(parentWindowHandler)) {
+//                System.out.println("Switching to child window");
+//                driver.switchTo().window(childHandle);
+//                System.out.println("Title After Switching is : " + driver.getTitle());
+//
+//				System.out.println("Switching to Parent window");
 ////				driver.switchTo().defaultContent();  //this will be applicable in frame / iframe
-				driver.switchTo().window(parentWindowHandler);
-				System.out.println("Title After Switching is : " + driver.getTitle());
-            } else {
-                System.out.println("Not Switching");
-            }
-		}
+//				driver.switchTo().window(parentWindowHandler);
+//				System.out.println("Title After Switching is : " + driver.getTitle());
+//            } else {
+//                System.out.println("Not Switching");
+//            }
+//		}
 
 //		newMessageWindowButton.click();
 //		Thread.sleep(5000);
 //		System.out.println("Title Before Switching is : " + driver.getTitle());
-////
+//
 //		Set<String> handlers = driver.getWindowHandles();
 //		Iterator<String> itr = handlers.iterator();
-////
+
 //		while(itr.hasNext()){
 //			String childHandle = itr.next();
 //			System.out.println("Child Windows Handler String : " + childHandle);
@@ -64,11 +64,12 @@ public class MultipleWindow {
 //				System.out.println("Switching to child window");
 //				driver.switchTo().window(childHandle);
 //				System.out.println("Title After Switching is : " + driver.getTitle());
-////
-////				System.out.println("Switching to Parent window");
-//////				driver.switchTo().defaultContent();
-////				driver.switchTo().window(parentWindowHandler);
-////				System.out.println("Title After Switching is : " + driver.getTitle());
+//                System.out.println("Text inside body of child \n"+driver.findElement(By.xpath("//body")).getText());
+
+//				System.out.println("Switching to Parent window");
+//				driver.switchTo().defaultContent();
+//				driver.switchTo().window(parentWindowHandler);
+//				System.out.println("Title After Switching is : " + driver.getTitle());
 //			}
 //			else {
 //				System.out.println("Not Switching");
@@ -76,31 +77,31 @@ public class MultipleWindow {
 ////
 //		}
 
-//        newBrowserTabButton.click();
-//        Thread.sleep(5000);
-//        System.out.println("Title Before Switching is : " + driver.getTitle());
-//
-//        Set<String> handlers = driver.getWindowHandles();
-//        Iterator<String> itr = handlers.iterator();
-//
-//        while(itr.hasNext()){
-//            String childHandle = itr.next();
-//            System.out.println("Child Windows Handler String : " + childHandle);
-//            if(!childHandle.equalsIgnoreCase(parentWindowHandler)){
-//                System.out.println("Switching to child window");
-//                driver.switchTo().window(childHandle);
-//                System.out.println("Title After Switching is : " + driver.getTitle());
+        newBrowserTabButton.click();
+        Thread.sleep(5000);
+        System.out.println("Title Before Switching is : " + driver.getTitle());
 
-//				System.out.println("Switching to Parent window");
-////				driver.switchTo().defaultContent();
-//				driver.switchTo().window(parentWindowHandler);
-//				System.out.println("Title After Switching To Parent is : " + driver.getTitle());
-//            }
-//            else {
-//                System.out.println("Not Switching");
-//            }
+        Set<String> handlers = driver.getWindowHandles();
+        Iterator<String> itr = handlers.iterator();
+
+        while(itr.hasNext()){
+            String childHandle = itr.next();
+            System.out.println("Child Windows Handler String : " + childHandle);
+            if(!childHandle.equalsIgnoreCase(parentWindowHandler)){
+                System.out.println("Switching to child window");
+                driver.switchTo().window(childHandle);
+                System.out.println("Title After Switching is : " + driver.getTitle());
 //
-//        }
+				System.out.println("Switching to Parent window");
+//				driver.switchTo().defaultContent();
+				driver.switchTo().window(parentWindowHandler);
+				System.out.println("Title After Switching To Parent is : " + driver.getTitle());
+            }
+            else {
+                System.out.println("Not Switching");
+            }
+
+        }
 
 
 //            driver.close();    //current
