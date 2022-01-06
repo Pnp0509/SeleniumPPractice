@@ -35,9 +35,6 @@ public class NewArrivals {
 
 
         }
-
-
-
         Thread.sleep(10000);
         driver.quit();
 
