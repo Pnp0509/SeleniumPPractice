@@ -4,7 +4,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,8 +15,8 @@ public class Wait {
 
         driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
 
-//        WebElement buttonForAlert = driver.findElement(By.id("alert"));
-//        buttonForAlert.click();
+        WebElement buttonForAlert = driver.findElement(By.id("alert"));
+        buttonForAlert.click();
 //        Thread.sleep(5500);
 //        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //        WebDriverWait wait = new WebDriverWait(driver,5);
@@ -63,16 +62,33 @@ public class Wait {
 //        System.out.println("Is Enabled : " + enabledButton.isEnabled());
 
 //        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-//                .withTimeout(40,TimeUnit.SECONDS)
-//                .pollingEvery(20,TimeUnit.SECONDS)  //polling frequency
+//                .withTimeout(10,TimeUnit.SECONDS)
+//                .pollingEvery(1,TimeUnit.SECONDS)  //polling frequency
 //                .ignoring(NoSuchElementException.class);
 //        WebDriverWait wait = new WebDriverWait(driver,40);
 
+        //Both checkbox and text box selecteted simultaneously
+
 //        WebElement changeTextButton = driver.findElement(By.id("populate-text"));
+//        WebElement checkboxButton= driver.findElement(By.xpath("//button[@id='checkbox']"));
+//        WebElement chekBox= driver.findElement(By.xpath("//input[@type='checkbox']"));
+//        checkboxButton.click();
 //        changeTextButton.click();
 //        WebElement changedText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
+//        Boolean changedText2 = wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//input[@type='checkbox']")));
 //        System.out.println("Text is : " + changedText.getText());
+//        System.out.println("checkBox Isselected---"+chekBox.isSelected());
 
+        //Both checkbox and text box selecteted diff time
+
+//        WebElement checkboxButton= driver.findElement(By.xpath("//button[@id='checkbox']"));
+//        WebElement chekBox= driver.findElement(By.xpath("//input[@type='checkbox']"));
+//        WebElement changedText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
+//        checkboxButton.click();
+//        wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//input[@type='checkbox']")));
+////        Boolean changedText2 = wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//input[@type='checkbox']")));
+//        System.out.println("checkBox Isselected---"+chekBox.isSelected());
+//        System.out.println("Text is : " + changedText.getText());
 
 
         driver.quit();
