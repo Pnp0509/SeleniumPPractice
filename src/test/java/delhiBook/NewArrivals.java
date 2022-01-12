@@ -16,6 +16,7 @@ public class NewArrivals {
         System.setProperty("webdriver.chrome.driver", baseDir + "\\src\\main\\resources\\drivers\\chromedriver_win.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://delhibookmarket.in/collections/new-books");
+        driver.manage().window().maximize();
 
         Thread.sleep(2000);
 
@@ -32,7 +33,7 @@ public class NewArrivals {
 //
 //
 //        }
-        WebElement categories= driver.findElement(By.xpath("//*[@id=\"sticky-wrapper\"]/div/div[1]/div[1]/div/div/div/div[2]/nav/ul/li[1]/a/span[1]"));
+        WebElement categories= driver.findElement(By.cssSelector("a.menu__moblie[href='/collections']"));
 
         Actions builder = new Actions(driver);
 

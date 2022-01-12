@@ -75,9 +75,6 @@ public class ActionClassPractice {
 
 
 
-
-
-
                 Thread.sleep(10000);
         driver.quit();
     }
