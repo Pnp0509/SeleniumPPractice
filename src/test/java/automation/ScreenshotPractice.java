@@ -3,9 +3,9 @@ package automation;
 import com.sun.deploy.cache.Cache;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import ru.yandex.qatools.ashot.AShot;
-//import ru.yandex.qatools.ashot.Screenshot;
-//import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -24,13 +24,13 @@ public class ScreenshotPractice {
         driver.get("https://www.autoitscript.com/site/autoit/downloads/");
 //        driver.navigate().to("https://www.google.com");
 
-//        System.out.println("Taking Normal Screenshot");
-//        generateScreenshot(driver);
+        System.out.println("Taking Normal Screenshot");
+        generateScreenshot(driver);
 
         Thread.sleep(1000);
 
-//        System.out.println("Taking Full Page Screenshot");
-//        generateFullPageScreenshot(driver);
+        System.out.println("Taking Full Page Screenshot");
+        generateFullPageScreenshot(driver);
 
         WebElement downloadButton = driver.findElement(By.cssSelector("img[title='Download AutoIt']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", downloadButton);
@@ -61,8 +61,8 @@ public class ScreenshotPractice {
         String filePath = currentDirectory + "\\src\\test\\Output\\Screenshots\\";
         String fileName = filePath + dtf.format(now) + ".png";
 //        String fileName = filePath + "Captured" + ".png";
-//        Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-//        ImageIO.write(screenshot.getImage(),"PNG",new File(fileName));
+        Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+        ImageIO.write(screenshot.getImage(),"PNG",new File(fileName));
 
         System.out.println("Full Page Screenshot Saved : " + fileName);
     }

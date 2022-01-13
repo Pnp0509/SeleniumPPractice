@@ -1,0 +1,20 @@
+Screenshot  -> Document / proof of test case failure
+
+TakesScreenshot -> interface
+
+File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(screenshotFile, new File(fileName));
+
+Full page screenshot using Ashot
+
+Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+ImageIO.write(screenshot.getImage(),"PNG",new File(fileName));
+
+
+Scroll and Zoom
+
+Scroll to bottom of page
+Scroll to Top of page
+Scroll to particular web element
+
+Set browser zoom level
