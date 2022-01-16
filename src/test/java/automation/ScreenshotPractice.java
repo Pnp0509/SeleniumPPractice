@@ -1,6 +1,6 @@
 package automation;
 
-import com.sun.deploy.cache.Cache;
+//import com.sun.deploy.cache.Cache;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import ru.yandex.qatools.ashot.AShot;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class ScreenshotPractice {
-    private static Cache FileUtils;
+//    private static Cache FileUtils;
 
     public static void main(String ... a) throws InterruptedException, IOException {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\chromedriver_win.exe");
@@ -49,7 +49,7 @@ public class ScreenshotPractice {
         String fileName = filePath + dtf.format(now) + ".png";
 //        String fileName = filePath + "Captured" +  ".png";
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshotFile, new File(fileName));
+//        FileUtils.copyFile(screenshotFile, new File(fileName));
 
         System.out.println("Screenshot Saved : " + fileName);
     }
