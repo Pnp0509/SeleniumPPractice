@@ -1,20 +1,9 @@
-Screenshot  -> Document / proof of test case failure
+File upload
 
-TakesScreenshot -> interface
+AutoIT -> Spy/locate windows element, compile
+SciTE -> write autoIT scripts
 
-File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-FileUtils.copyFile(screenshotFile, new File(fileName));
+Write the script and save it in au3
+Compile the au3 -> .exe  -> prefer x86
 
-Full page screenshot using Ashot
-
-Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
-ImageIO.write(screenshot.getImage(),"PNG",new File(fileName));
-
-
-Scroll and Zoom
-
-Scroll to bottom of page
-Scroll to Top of page
-Scroll to particular web element
-
-Set browser zoom level
+Runtime.getRuntime().exec(Path of .exe);
