@@ -1,6 +1,7 @@
 package automation;
 
 //import com.sun.deploy.cache.Cache;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.qatools.ashot.AShot;
@@ -49,7 +50,7 @@ public class ScreenshotPractice {
         String fileName = filePath + dtf.format(now) + ".png";
 //        String fileName = filePath + "Captured" +  ".png";
         File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        FileUtils.copyFile(screenshotFile, new File(fileName));
+        FileUtils.copyFile(screenshotFile, new File(fileName));
 
         System.out.println("Screenshot Saved : " + fileName);
     }
