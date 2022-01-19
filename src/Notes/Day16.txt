@@ -1,0 +1,41 @@
+Multiple browsers type
+
+https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+
+Chrome
+System.setProperty("webdriver.chrome.driver",baseDir + "\\src\\main\\resources\\drivers\\chromedriver_win.exe");
+driver = new ChromeDriver();
+
+IE
+******* Need to set browser zoom level to 100% and security for all Zone to same enable/disable
+
+System.setProperty("webdriver.ie.driver",baseDir + "\\src\\main\\resources\\drivers\\IEDriverServer_win.exe");
+driver = new InternetExplorerDriver();
+
+Edge
+System.setProperty("webdriver.edge.driver",baseDir + "\\src\\main\\resources\\drivers\\msedgedriver_win.exe");
+driver = new EdgeDriver();
+
+Firefox
+System.setProperty("webdriver.gecko.driver",baseDir + "\\src\\main\\resources\\drivers\\geckodriver_win.exe" );
+driver = new FirefoxDriver();
+
+DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+capabilities.setCapability("marionette",true);
+driver= new FirefoxDriver(capabilities);
+
+
+Headless browser
+-> No UI -> No rendering time
+
+Chrome
+System.setProperty("webdriver.chrome.driver",baseDir + "\\src\\main\\resources\\drivers\\chromedriver_win.exe");
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless");   //No UI
+options.addArguments("--incognito");  //to avoid cache issues
+driver = new ChromeDriver(options);
+
+HTMLUnit
+PhantomJS
+System.setProperty("phantomjs.binary.path",baseDir + "\\src\\main\\resources\\drivers\\phantomjs_win.exe");
+driver = new PhantomJSDriver();

@@ -25,22 +25,23 @@ public class UploadFilePractice {
 //        uploadField.click();
 //        ((JavascriptExecutor)driver).executeScript("arguments[0].click()",uploadField);
 
-//        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath("//select")));
+//        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",uploadField);
 //        Thread.sleep(2000);
 
-        Actions builder = new Actions(driver);
-        Action clickButton = builder.moveToElement(uploadField).click(uploadField).build();
-        clickButton.perform();
-        System.out.println("clicked");
+//        Actions builder = new Actions(driver);
+//        Action clickButton = builder.moveToElement(uploadField).click(uploadField).build();
+//        clickButton.perform();
+//        System.out.println("clicked");
 
-        Thread.sleep(10000);
+//        Thread.sleep(3000);
 
-        Runtime.getRuntime().exec(baseDir + "\\src\\main\\utils\\autoIT\\fileUpload.exe");
-        System.out.println("File uploaded is : " + uploadField.getText());
-        System.out.println("File uploaded is : "+((JavascriptExecutor)driver).executeScript("return arguments[0].value",uploadField));
+//        Runtime.getRuntime().exec(baseDir + "\\src\\main\\utils\\autoIT\\fileUpload.exe");
+//        Thread.sleep(2000);
+//        System.out.println("File uploaded is : " + uploadField.getText());
+//        System.out.println("File uploaded is : "+((JavascriptExecutor)driver).executeScript("return arguments[0].value",uploadField));
 
 //        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",uploadField);
-//        uploadField.sendKeys("D:\\Prashant\\Automation\\fromGit\\P3\\aug2021\\src\\main\\resources\\uploadFile\\image.PNG");
+//        uploadField.sendKeys("D:\\Prashant\\Automation\\fromGit\\batch\\dec2021\\src\\main\\resources\\uploadFile\\image.PNG");
 
 //        Runtime.getRuntime().exec(baseDir + "\\src\\main\\utils\\autoIT\\clickOnInput.exe");
 //        Thread.sleep(3000);
@@ -51,7 +52,7 @@ public class UploadFilePractice {
 //        uploadField.sendKeys(baseDir + "\\src\\test\\testData\\uploadFile\\rubixCube3By3.png");
 
 
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         driver.quit();
     }
 }
