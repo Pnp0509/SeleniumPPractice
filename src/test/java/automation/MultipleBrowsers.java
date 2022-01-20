@@ -36,7 +36,7 @@ public class MultipleBrowsers {
 //        Need to set browser zoom level to 100% and security for all to same enable/disable
 //        System.setProperty("webdriver.ie.driver",baseDir + "\\src\\main\\resources\\drivers\\IEDriverServer_win.exe");
 //        driver = new InternetExplorerDriver();
-
+//
 //        DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 //        capabilities.setCapability("requireWindowFocus", true);
 //        capabilities.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
@@ -56,7 +56,7 @@ public class MultipleBrowsers {
 //        driver = new FirefoxDriver();
 
 //        System.setProperty("webdriver.gecko.driver",baseDir + "\\src\\main\\resources\\drivers\\geckodriver_win.exe" );
-
+//
 //        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 //        capabilities.setCapability("marionette",true);
 //        driver= new FirefoxDriver(capabilities);
