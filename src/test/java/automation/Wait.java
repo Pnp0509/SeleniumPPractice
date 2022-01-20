@@ -31,8 +31,8 @@ public class Wait {
 
 
 
-//        WebElement changeTextButton = driver.findElement(By.id("populate-text"));
-//        changeTextButton.click();
+        WebElement changeTextButton = driver.findElement(By.id("populate-text"));
+        changeTextButton.click();
 
 //        Thread.sleep(11000);
 
@@ -43,36 +43,36 @@ public class Wait {
 //        WebDriverWait wait = new WebDriverWait(driver,15);
 //        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h2[text()='Selenium Webdriver']"))));
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
-//        WebElement changedText = driver.findElement(By.xpath("//h2[text()='Selenium Webdriver']"));
+        WebElement changedText = driver.findElement(By.xpath("//h2[text()='Selenium Webdriver']"));
 //        wait.until(ExpectedConditions.visibilityOf(changedText));
 //        WebElement changedText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
 
 //        System.out.println("Text is : " + changedText.getText());
 
         WebElement displayOtherButton = driver.findElement(By.id("display-other-button"));
-        WebElement enabledButton = driver.findElement(By.id("hidden"));
-        System.out.println(enabledButton.isDisplayed());
+//        WebElement enabledButton = driver.findElement(By.id("hidden"));
+//        System.out.println(enabledButton.isDisplayed());
         displayOtherButton.click();
 
 //        Thread.sleep(11000);
 
-        enabledButton.click();
+//        enabledButton.click();
 
 //        WebDriverWait wait = new WebDriverWait(driver,10);
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("hidden")));
 //        System.out.println(enabledButton.isDisplayed());
 
         WebElement enableButton = driver.findElement(By.id("enable-button"));
-        WebElement enabledButton2 = driver.findElement(By.id("disable"));
-        System.out.println("Is Displayed : " + enabledButton2.isDisplayed());
-        System.out.println("Is Enabled : " + enabledButton2.isEnabled());
+//        WebElement enabledButton2 = driver.findElement(By.id("disable"));
+//        System.out.println("Is Displayed : " + enabledButton2.isDisplayed());
+//        System.out.println("Is Enabled : " + enabledButton2.isEnabled());
         enableButton.click();
-        System.out.println("Is Enabled : " + enabledButton2.isEnabled());
+//        System.out.println("Is Enabled : " + enabledButton2.isEnabled());
 //        Thread.sleep(11000);
 //        WebDriverWait wait = new WebDriverWait(driver,15);
 //        wait.until(ExpectedConditions.elementToBeClickable(enabledButton2));
-        enabledButton2.click();
-        System.out.println("Is Enabled : " + enabledButton2.isEnabled());
+//        enabledButton2.click();
+//        System.out.println("Is Enabled : " + enabledButton2.isEnabled());
 
 //        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 //                .withTimeout(10,TimeUnit.SECONDS)
