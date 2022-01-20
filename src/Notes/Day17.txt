@@ -1,0 +1,23 @@
+TestNG
+
+<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+			<scope>test</scope>
+</dependency>
+
+
+@Annotations
+
+I am in Before Suite
+I am in Before Test
+I am in Before Class
+I am in Before Group testGroups
+I am in Before Method
+In test case 1
+I am in After Method
+I am in After Group testGroups
+I am in After Class
+I am in After Test
+I am in After Suite

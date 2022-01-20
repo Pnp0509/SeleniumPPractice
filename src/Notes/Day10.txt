@@ -1,0 +1,33 @@
+Waits in Selenium
+    thread.sleep   -> HardSleep  HardWait
+        Thread.sleep(10000);
+        Active where it is used/written -> one time
+
+	implicitly wait
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    It will be applicable to all the webElements -> no need to declare/initialize again and again
+
+	explicit wait
+	    Conditional wait
+	        visibilityOfElementLocated
+	        visibilityOf
+	        elementToBeClickable
+	            And Many More
+
+	    WebDriverWait wait = new WebDriverWait(driver,15);
+	    wait.until(ExpectedConditions.alertIsPresent());
+	    wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//h2[text()='Selenium Webdriver']"))));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
+        wait.until(ExpectedConditions.elementToBeClickable(enabledButton));
+
+	fluentwait
+	    FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                        .withTimeout(40,TimeUnit.SECONDS)
+                        .pollingEvery(20,TimeUnit.SECONDS)  //polling frequency
+                        .ignoring(NoSuchElementException.class);
+
+        WebElement changedText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[text()='Selenium Webdriver']")));
+
+
+	advantage disadvantage
+	* time 500ms in exp wait is by default

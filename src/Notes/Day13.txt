@@ -1,0 +1,8 @@
+Action Class
+
+Actions builder = new Actions(driver);
+Action seriesOfActionCash = builder.moveToElement(cash5000).clickAndHold().moveToElement(dropCash).release().build();
+seriesOfActionCash.perform();
+
+builder.dragAndDrop(cash5000,dropCash).build().perform();
+builder.dragAndDropBy(bank,133,40).build().perform();

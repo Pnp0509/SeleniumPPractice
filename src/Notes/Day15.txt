@@ -1,0 +1,26 @@
+File upload
+
+AutoIT -> Spy/locate windows element, compile
+SciTE -> write autoIT scripts
+
+Write the script and save it in au3
+Compile the au3 -> .exe  -> prefer x86
+
+Runtime.getRuntime().exec(Path of .exe);
+
+if type="file"
+
+WebElement uploadField = driver.findElement(By.name("photo"));
+uploadField.sendKeys("D:\\Prashant\\Automation\\fromGit\\P3\\aug2021\\src\\main\\resources\\uploadFile\\image.PNG");
+
+
+
+IF interaction with webelement not happening
+
+WebElement uploadField = driver.findElement(By.name("photo"));
+//        uploadField.click();    //Not working throwing error  //try changing locator
+//        ((JavascriptExecutor)driver).executeScript("arguments[0].click()",uploadField);   //not working not throwing error
+
+        Actions builder = new Actions(driver);
+        Action clickButton = builder.moveToElement(uploadField).click(uploadField).build();
+        clickButton.perform();  //working
