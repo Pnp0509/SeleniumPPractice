@@ -20,10 +20,10 @@ public class Wait2 {
 
         driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
 
-//        WebElement changeTextButton = driver.findElement(By.id("populate-text"));
-//        changeTextButton.click();
+        WebElement changeTextButton = driver.findElement(By.id("populate-text"));
+        changeTextButton.click();
 //        wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//h2[text()='Selenium Webdriver']"))));
-//        WebElement changedText = driver.findElement(By.xpath("//h2[text()='Selenium Webdriver']"));
+        WebElement changedText = driver.findElement(By.xpath("//h2[text()='Selenium Webdriver']"));
 
 
         WebElement displayOtherButton = driver.findElement(By.id("display-other-button"));
@@ -33,9 +33,9 @@ public class Wait2 {
         WebElement hiddenButton = driver.findElement(By.id("hidden"));
         hiddenButton.click();
 
-//        WebElement enableButton = driver.findElement(By.id("enable-button"));
-//        enableButton.click();
-//        WebElement text2 = driver.findElement(By.xpath("//span[@id='enablecountdowntimer'][text()='0']"));
+        WebElement enableButton = driver.findElement(By.id("enable-button"));
+        enableButton.click();
+        WebElement text2 = driver.findElement(By.xpath("//span[@id='enablecountdowntimer'][text()='0']"));
 
 
         driver.quit();
