@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite">
+    <test name="PracticeTest">
+        <groups>
+            <run>
+<!--                 <include name="Group1"></include>-->
+
+<!--                <include name="Group2"></include>-->
+
+<!--                <exclude name="Group2"></exclude>-->
+
+<!--                <include name="Group1"></include>-->
+<!--                <exclude name="Group2"></exclude>-->
+
+                    <include name="Group3"></include>
+                    <include name="Group2"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="automation.testNGPractice.IncludeExcludePractice"/>
+        </classes>
+    </test>
+</suite>
