@@ -23,6 +23,7 @@ End Goal >  user should buy mobile
 
 
 Priorities for testcases
+@Test(priority = 2)
 
 highest -> no priority
 then 0 -> 1 -> ......
