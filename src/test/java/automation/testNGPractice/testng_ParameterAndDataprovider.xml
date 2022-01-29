@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite">
+    <test name="PracticeTest">
+        <parameter name="result" value="Valid"></parameter>
+        <parameter name="username" value="Prashant"></parameter>
+        <parameter name="password" value="Nimje"></parameter>
+<!--        <parameter name="passwords" value="Nimje"></parameter>-->
+        <classes>
+            <class name="automation.testNGPractice.ParameterAndDataProviderPractice"/>
+        </classes>
+    </test>
+</suite>
