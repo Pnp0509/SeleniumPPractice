@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class ParameterAndDataProviderPractice {
 
-    //@Test
+    @Test
     @Parameters({"username","password","result"})
 //    @Parameters({"password","result"})
 //    @Parameters({"usernamee","password","result"})
@@ -25,7 +25,7 @@ public class ParameterAndDataProviderPractice {
 
     @DataProvider(name = "CityProvider")
     public Object[][] cp(){
-        return new Object[][] {{"Pune"}, {"Mumbai"}};
+        return new Object[][] {{"Pune"}, {"Mumbai"}, {"Nagpur"}};
     }
 
     @Test (dataProvider = "CityProvider")
@@ -48,7 +48,7 @@ public class ParameterAndDataProviderPractice {
         return credentials;
     }
 
-    //@Test (dataProvider = "CredentialsProvider")
+    @Test (dataProvider = "CredentialsProvider")
     public void credentialsTestingMultipleValueInEachSet (String uname,String pass,String res) {
         System.out.println("I am from method credentialsTestingMultipleValueInEachSet and following dataSet are provided to me");
         System.out.println("Username : " + uname);
