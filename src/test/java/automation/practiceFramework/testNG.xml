@@ -3,7 +3,8 @@
 <suite name="Automation Suite">
     <test name="Mercury Tours Test">
         <classes>
-            <class name="automation.practiceFramework.LoginTest"/>
+<!--            <class name="automation.practiceFramework.LoginTest"/>-->
+            <class name="automation.practiceFramework.RegisterTest"/>
         </classes>
     </test>
 </suite>
