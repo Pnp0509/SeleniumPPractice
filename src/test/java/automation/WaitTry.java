@@ -19,7 +19,7 @@ public class WaitTry {
         driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
 
 
-//        WebDriverWait wait =new WebDriverWait(driver,20);
+        WebDriverWait wait =new WebDriverWait(driver,20);
 
 //        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 //                .withTimeout(10,TimeUnit.SECONDS)

@@ -44,7 +44,7 @@ public class LoginTest {
     }
 
     @Test(priority = 3)
-    public void loginWithInValidCredentials() {
+    public void loginWithInvalidusernameValidpassword() {
         loginPageObjects.setTextUsername("admin123");
         loginPageObjects.setTextPassword("admin");
 
@@ -52,6 +52,31 @@ public class LoginTest {
 
         Assert.assertTrue(!driver.getCurrentUrl().contains("login_sucess"), "Login Fail");
     }
+
+    @Test(priority = 4)
+    public void loginWithValidusernameInvalidpassword() {
+        loginPageObjects.setTextUsername("admin");
+        loginPageObjects.setTextPassword("xyz");
+
+        loginPageObjects.clickSubmitButton();
+
+        Assert.assertTrue(!driver.getCurrentUrl().contains("login_sucess"), "Login Fail");
+    }
+    @Test(priority = 5)
+    public void loginWithValidusernameonly() {
+        loginPageObjects.setTextUsername("admin");
+        loginPageObjects.clickSubmitButton();
+
+        Assert.assertTrue(!driver.getCurrentUrl().contains("login_sucess"), "Login Fail");
+    }
+    @Test(priority = 6)
+    public void loginWithValidPasswordonly() {
+        loginPageObjects.setTextPassword("admin");
+        loginPageObjects.clickSubmitButton();
+
+        Assert.assertTrue(!driver.getCurrentUrl().contains("login_sucess"), "Login Fail");
+    }
+
 
     @AfterClass(alwaysRun = true)
     public void closeBrowser(){
