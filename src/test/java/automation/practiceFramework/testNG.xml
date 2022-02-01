@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Automation Suite">
-    <test name="Mercury Tours Test">
+    <test name="Login Test">
         <classes>
-<!--            <class name="automation.practiceFramework.LoginTest"/>-->
+            <class name="automation.practiceFramework.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Register Test">
+        <classes>
             <class name="automation.practiceFramework.RegisterTest"/>
         </classes>
     </test>

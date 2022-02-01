@@ -1,24 +1,16 @@
 package automation.practiceFramework;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class RegisterTest {
-    WebDriver driver;
+public class RegisterTest extends TestBase{
     RegisterPageObjects registerPageObjects;
 
     @BeforeClass(alwaysRun = true)
-    public void launchBrowser() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\chromedriver_win.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://demo.guru99.com/test/newtours/register.php");
+    public void initializePageObjects() {
         registerPageObjects = new RegisterPageObjects(driver);
     }
 
@@ -51,11 +43,6 @@ public class RegisterTest {
 
     @Test(priority = 3, dependsOnMethods = "verifyMandatoryFieldsPresent")
     public void verifySubmitButtonIsDisabledByDefault(){
-        Assert.assertFalse(registerPageObjects.buttonSubmit.isEnabled(),"Submit Button is Enabled By Degault");
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void closeBrowser(){
-        driver.quit();
+        Assert.assertFalse(registerPageObjects.buttonSubmit.isEnabled(),"Submit Button is Enabled By Default");
     }
 }
