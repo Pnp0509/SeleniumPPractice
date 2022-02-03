@@ -1,0 +1,46 @@
+Depends on method
+
+@Test(dependsOnMethods = "test2")
+public void test3(){
+        System.out.println("I am from test case 3 and I will run only if test2 pass");
+    }
+
+test3 will execute if and only if test2 is passed.
+Other wise it will be marked as skiped / ignored.
+
+
+
+Include and Exclude test case using groups
+
+Login scenario
+
+1.valid login and password  >> positive  high
+
+2.valid username invalid pwd  >>  negative  medium
+3.invalid id invalid password  >> negative  medium
+4.invalid loginID and valid password  >> negative  medium
+
+5.blank id blank password  >> negative  low
+6.valid user name and blank password  >> negative  low
+7.blank id and valid password  >> negative  low
+
+
+<groups>
+<run>
+<include name="Group1"></include>
+<exclude name="Group2"></exclude>
+</run>
+</groups>
+
+<parameter name="result" value="Valid"></parameter>
+<parameter name="username" value="Prashant"></parameter>
+<parameter name="password" value="Nimje"></parameter>
+
+
+@Parameters({"username","password","result"})
+
+
+@DataProvider(name = "CityProvider")
+    public Object[][] cp(){
+        return new Object[][] {{"Pune"}, {"Mumbai"}};
+    }

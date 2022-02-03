@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--<suite name="Automation Suite">-->
+<suite name="Automation Suite" parallel="tests" thread-count="3">
+    <test name="PracticeTest3">
+        <classes>
+            <class name="automation.testNGPractice.ParallelClass"/>
+        </classes>
+    </test>
+    <test name="PracticeTest2">
+        <classes>
+            <class name="automation.testNGPractice.ParallelMethods"/>
+<!--            <class name="automation.testNGPractice.ParallelTest"/>-->
+        </classes>
+    </test>
+    <test name="PracticeTest1">
+        <classes>
+            <class name="automation.testNGPractice.ParallelTest"/>
+<!--            <class name="automation.testNGPractice.AssertionPractice"/>-->
+        </classes>
+    </test>
+</suite>

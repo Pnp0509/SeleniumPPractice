@@ -1,0 +1,31 @@
+Assertions
+
+Hard Assert
+    If Assertion fails, further code will not get executed and test case will be marked as fail
+Syntax: Assert.assertTrue();
+
+SoftAssert / Verify
+    If Assertion fails, further code will get executed and test case will be marked as fail
+Syntax:
+SoftAssert softAssert = new SoftAssert();
+softAssert.assertTrue();
+softAssert.assertAll();
+
+original price  > hard assert
+offered price  > hard
+offer percentage  >  soft
+color variants   >  hard
+rating   >   hard
+availability  >  hard
+
+
+End Goal >  user should buy mobile
+
+
+Priorities for testcases
+@Test(priority = 2)
+
+highest -> no priority
+then 0 -> 1 -> ......
+
+IF same priority -> sequence of execution will be decided from method name alphabetically
