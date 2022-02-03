@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite">
+    <listeners>
+<!--        <listener class-name = "automation.testNGPractice.ListenerITestListener"></listener>-->
+<!--        <listener class-name = "automation.testNGPractice.ListenerISuiteListener"></listener>-->
+<!--        <listener class-name = "automation.testNGPractice.ListenerIInvokedMethodListener"></listener>-->
+<!--        <listener class-name = "automation.testNGPractice.ListenerRetry"></listener>-->
+<!--        cannot be cast to org.testng.ITestNGListener-->
+<!--        <listener class-name = "automation.testNGPractice.ListenerAnnotationTransformer"></listener>-->
+    </listeners>
+    <test name="PracticeTest">
+        <classes>
+            <class name="automation.testNGPractice.ListenerTest1"/>
+        </classes>
+    </test>
+</suite>
