@@ -1,12 +1,9 @@
 package automation.testNGPractice;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-@Listeners(value = {ListenerITestListener.class,ListenerISuiteListener.class,ListenerIInvokedMethodListener.class})
+//@Listeners(value = {ListenerITestListener.class,ListenerISuiteListener.class,ListenerIInvokedMethodListener.class})
 //@Listeners(value = ListenerITestListener.class)
 //@Listeners(value = ListenerISuiteListener.class)
 //@Listeners(value = ListenerIInvokedMethodListener.class)
@@ -21,6 +18,23 @@ public class ListenerTest1 {
     @AfterClass
     public void afterClass(){
         System.out.println("I am from after class annotation");
+    }
+
+    @BeforeTest
+    public void beforetest(){
+        System.out.println("I am from Before Test");
+    }
+    @AfterTest
+    public void aftertest(){
+        System.out.println("I am from After Test");
+    }
+    @BeforeSuite
+    public void beforesuit() {
+        System.out.println("I am from Before Suit");
+    }
+    @AfterSuite
+    public void aftersuit() {
+        System.out.println("I am from After Suit");
     }
 
     @Test
