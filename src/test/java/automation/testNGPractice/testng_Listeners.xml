@@ -12,6 +12,7 @@
     <test name="PracticeTest">
         <classes>
             <class name="automation.testNGPractice.ListenerTest1"/>
+            <class name="automation.testNGPractice.ListenerTest2"/>
         </classes>
     </test>
 </suite>
