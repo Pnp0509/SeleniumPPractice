@@ -58,6 +58,7 @@ public class ActionClassPractice {
 //        Action seriesOfAction = builder.moveToElement(ownersEquity).build();
 //        seriesOfAction.perform();
 
+
             driver.get("https://www.facebook.com/");
             Thread.sleep(5000);
             WebElement email = driver.findElement(By.xpath("//input[@name='email']"));

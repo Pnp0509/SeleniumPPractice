@@ -14,7 +14,7 @@
 <!--                <exclude name="Group2"></exclude>-->
 
                     <include name="Group3"></include>
-                    <include name="Group2"></include>
+<!--                    <include name="Group2"></include>-->
             </run>
         </groups>
         <classes>

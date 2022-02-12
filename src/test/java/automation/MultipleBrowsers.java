@@ -52,11 +52,11 @@ public class MultipleBrowsers {
 
 //        Firefox
 //        System.setProperty("webdriver.firefox.marionette",baseDir + "\\src\\main\\resources\\drivers\\geckodriver_win.exe");
-//        System.setProperty("webdriver.gecko.driver",baseDir + "\\src\\main\\resources\\drivers\\geckodriver_win.exe" );
-//        driver = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver",baseDir + "\\src\\main\\resources\\drivers\\geckodriver_win.exe" );
+        driver = new FirefoxDriver();
 
 //        System.setProperty("webdriver.gecko.driver",baseDir + "\\src\\main\\resources\\drivers\\geckodriver_win.exe" );
-//
+
 //        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 //        capabilities.setCapability("marionette",true);
 //        driver= new FirefoxDriver(capabilities);
@@ -76,8 +76,8 @@ public class MultipleBrowsers {
 //        driver = new HtmlUnitDriver();
 
 //        PhantomJS
-        System.setProperty("phantomjs.binary.path",baseDir + "\\src\\main\\resources\\drivers\\phantomjs_win.exe");
-        driver = new PhantomJSDriver();
+//        System.setProperty("phantomjs.binary.path",baseDir + "\\src\\main\\resources\\drivers\\phantomjs_win.exe");
+//        driver = new PhantomJSDriver();
 
 //        driver.manage().window().maximize();
         driver.get("https://www.calculator.net/percent-calculator.html");

@@ -66,5 +66,8 @@ public class ScreenshotPractice {
         ImageIO.write(screenshot.getImage(),"PNG",new File(fileName));
 
         System.out.println("Full Page Screenshot Saved : " + fileName);
+
+
+
     }
 }

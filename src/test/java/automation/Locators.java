@@ -31,12 +31,12 @@ public class Locators {
 //			System.out.println(element.getText());
 //		}
 
-//		System.out.println("Link Text : " + driver.findElement(By.linkText("Scientific")).getTagName());
+		System.out.println("Link Text : " + driver.findElement(By.linkText("Scientific")).getTagName());
 //		System.out.println("Link Text : " + driver.findElement(By.linkText("Scient")).getTagName());
 //
 //		System.out.println("Partial Link Text : " + driver.findElement(By.partialLinkText("ient")).getTagName());
 
-		driver.findElement(By.className("inlong")).sendKeys("Prashant");
+//		driver.findElement(By.className("inlong")).sendKeys("Prashant");
 //        driver.findElements(By.className("inlong"));
 
 

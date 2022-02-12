@@ -27,6 +27,7 @@ public class SelectClassPractice {
 //		System.out.println("Default selected : " + select.getFirstSelectedOption().getText());
 //		Thread.sleep(3000);
 
+
 //		select.selectByVisibleText("INDIA");
 //		select.selectByVisibleText("india");
 //		select.selectByVisibleText("IND");
