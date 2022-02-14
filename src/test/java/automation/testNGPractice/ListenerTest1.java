@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 //@Listeners(value = {ListenerITestListener.class,ListenerISuiteListener.class,ListenerIInvokedMethodListener.class})
-//@Listeners(value = ListenerITestListener.class)
+@Listeners(value = ListenerITestListener.class)
 //@Listeners(value = ListenerISuiteListener.class)
 //@Listeners(value = ListenerIInvokedMethodListener.class)
 //@Listeners(value = ListenerRetry.class)  //This wont work
